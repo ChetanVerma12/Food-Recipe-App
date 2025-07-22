@@ -24,7 +24,7 @@ function RecipeItems() {
   },[recipes])
 
   const onDelete= async(id)=>{
-     await axios.delete(`http://localhost:5000/recipe/${id}`)
+     await axios.delete(`https://food-recipe-app-back-h80p.onrender.com/recipe/${id}`)
      .then((res)=>console.log(res))
      setAllRecipes(recipes=>recipes.filter(recipe=>recipe._id !== id))
       let filterItem = favItems.filter(recipe=>recipe._id !==id)
